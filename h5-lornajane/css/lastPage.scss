@@ -1,0 +1,187 @@
+
+$basePx:640;
+
+@function pxCount($px) {
+  @return $px/$basePx*10+rem;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "微软雅黑";
+}
+img {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+html,body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.Page-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -999;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.main-bg {
+  width: pxCount(612);
+  height: pxCount(798);
+  position: absolute;
+  top: pxCount(142);
+  left: 0;
+  .Dear-box {
+    height: pxCount(33);
+    position: absolute;
+    top: pxCount(64);
+    left: pxCount(60);
+    .Dear-text {
+      display: block;
+      float: left;
+      font-size: 14px;
+      line-height: pxCount(33);
+      color: #383737;
+    }
+  }
+  .You-box {
+    height: pxCount(33);
+    position: absolute;
+    top: pxCount(648);
+    left: pxCount(440);
+    .You-text {
+      display: block;
+      float: left;
+      font-size: 14px;
+      line-height: pxCount(33);
+      color: #383737;
+    }
+  }
+  .play-Again {
+    width: pxCount(172);
+    height: pxCount(40);
+    position: absolute;
+    top: pxCount(718);
+    left: pxCount(50);
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .show-To {
+    width: pxCount(172);
+    height: pxCount(40);
+    position: absolute;
+    top: pxCount(718);
+    left: pxCount(234);
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .get-Gift {
+    width: pxCount(172);
+    height: pxCount(40);
+    position: absolute;
+    top: pxCount(718);
+    left: pxCount(418);
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .play-Too {
+    width: pxCount(172);
+    height: pxCount(40);
+    position: absolute;
+    top: pxCount(718);
+    left: pxCount(132);
+    display: none;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .have-Gift {
+    width: pxCount(172);
+    height: pxCount(40);
+    position: absolute;
+    top: pxCount(718);
+    left: pxCount(336);
+    display: none;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+
+
+}
+.code {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: none;
+  .code-img {
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+  }
+  .close-Btn {
+    width: pxCount(44);
+    height: pxCount(44);
+    position: absolute;
+    top: pxCount(674);
+    left: pxCount(298);
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.cover {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.85;
+  z-index: 10;
+  display: none;
+  .share-img {
+    width: pxCount(274);
+    height: pxCount(515);
+    position: absolute;
+    top: 0;
+    left: pxCount(294);
+    background: url(../img/page1/share.png) no-repeat;
+    background-size: 100% 100%;
+    -webkit-animation: sharePlay 1.7s linear infinite;
+  }
+}
+
+@-webkit-keyframes sharePlay
+{
+  0% {transform: rotate(0deg); transform-origin: pxCount(274) 0;}
+  25% {transform: rotate(10deg); transform-origin: pxCount(274) 0;}
+  50% {transform: rotate(0deg); transform-origin: pxCount(274) 0;}
+  75% {transform: rotate(-10deg); transform-origin: pxCount(274) 0;}
+  100% {transform: rotate(0deg); transform-origin: pxCount(274) 0;}
+}

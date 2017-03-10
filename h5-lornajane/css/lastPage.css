@@ -1,0 +1,164 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "微软雅黑"; }
+
+img {
+  display: block;
+  margin: 0;
+  padding: 0; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative; }
+
+.Page-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -999; }
+  .Page-bg img {
+    width: 100%;
+    height: 100%; }
+
+.main-bg {
+  width: 9.5625rem;
+  height: 12.46875rem;
+  position: absolute;
+  top: 2.21875rem;
+  left: 0; }
+  .main-bg .Dear-box {
+    height: 0.51563rem;
+    position: absolute;
+    top: 1rem;
+    left: 0.9375rem; }
+    .main-bg .Dear-box .Dear-text {
+      display: block;
+      float: left;
+      font-size: 14px;
+      line-height: 0.51563rem;
+      color: #383737; }
+  .main-bg .You-box {
+    height: 0.51563rem;
+    position: absolute;
+    top: 10.125rem;
+    left: 6.875rem; }
+    .main-bg .You-box .You-text {
+      display: block;
+      float: left;
+      font-size: 14px;
+      line-height: 0.51563rem;
+      color: #383737; }
+  .main-bg .play-Again {
+    width: 2.6875rem;
+    height: 0.625rem;
+    position: absolute;
+    top: 11.21875rem;
+    left: 0.78125rem; }
+    .main-bg .play-Again img {
+      width: 100%;
+      height: 100%; }
+  .main-bg .show-To {
+    width: 2.6875rem;
+    height: 0.625rem;
+    position: absolute;
+    top: 11.21875rem;
+    left: 3.65625rem; }
+    .main-bg .show-To img {
+      width: 100%;
+      height: 100%; }
+  .main-bg .get-Gift {
+    width: 2.6875rem;
+    height: 0.625rem;
+    position: absolute;
+    top: 11.21875rem;
+    left: 6.53125rem; }
+    .main-bg .get-Gift img {
+      width: 100%;
+      height: 100%; }
+  .main-bg .play-Too {
+    width: 2.6875rem;
+    height: 0.625rem;
+    position: absolute;
+    top: 11.21875rem;
+    left: 2.0625rem;
+    display: none; }
+    .main-bg .play-Too img {
+      width: 100%;
+      height: 100%; }
+  .main-bg .have-Gift {
+    width: 2.6875rem;
+    height: 0.625rem;
+    position: absolute;
+    top: 11.21875rem;
+    left: 5.25rem;
+    display: none; }
+    .main-bg .have-Gift img {
+      width: 100%;
+      height: 100%; }
+
+.code {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: none; }
+  .code .code-img {
+    width: 100%;
+    height: 100%;
+    z-index: 10; }
+  .code .close-Btn {
+    width: 0.6875rem;
+    height: 0.6875rem;
+    position: absolute;
+    top: 10.53125rem;
+    left: 4.65625rem; }
+    .code .close-Btn img {
+      width: 100%;
+      height: 100%; }
+
+.cover {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.85;
+  z-index: 10;
+  display: none; }
+  .cover .share-img {
+    width: 4.28125rem;
+    height: 8.04688rem;
+    position: absolute;
+    top: 0;
+    left: 4.59375rem;
+    background: url(../img/page1/share.png) no-repeat;
+    background-size: 100% 100%;
+    -webkit-animation: sharePlay 1.7s linear infinite; }
+
+@-webkit-keyframes sharePlay {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: 4.28125rem 0; }
+  25% {
+    transform: rotate(10deg);
+    transform-origin: 4.28125rem 0; }
+  50% {
+    transform: rotate(0deg);
+    transform-origin: 4.28125rem 0; }
+  75% {
+    transform: rotate(-10deg);
+    transform-origin: 4.28125rem 0; }
+  100% {
+    transform: rotate(0deg);
+    transform-origin: 4.28125rem 0; } }
+
+/*# sourceMappingURL=lastPage.css.map */

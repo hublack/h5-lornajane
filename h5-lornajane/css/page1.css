@@ -1,0 +1,114 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "微软雅黑"; }
+
+img {
+  display: block;
+  margin: 0;
+  padding: 0; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative; }
+
+.Page-bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -999; }
+  .Page-bg img {
+    width: 100%;
+    height: 100%; }
+
+.main-bg {
+  width: 9.5625rem;
+  height: 12.46875rem;
+  position: absolute;
+  top: 2.21875rem;
+  left: 0; }
+  .main-bg .again-Btn {
+    width: 2.21875rem;
+    height: 0.35938rem;
+    position: absolute;
+    top: 0.35938rem;
+    left: 6.95313rem; }
+    .main-bg .again-Btn img {
+      width: 100%;
+      height: 100%; }
+  .main-bg .finish-Btn {
+    width: 2.6875rem;
+    height: 0.625rem;
+    position: absolute;
+    top: 11.21875rem;
+    left: 3.65625rem; }
+    .main-bg .finish-Btn img {
+      width: 100%;
+      height: 100%; }
+  .main-bg .Dear-box {
+    height: 0.51563rem;
+    position: absolute;
+    top: 0.90625rem;
+    left: 0.9375rem; }
+    .main-bg .Dear-box .Dear-text {
+      display: block;
+      float: left;
+      font-size: 14px;
+      line-height: 0.51563rem;
+      color: #383737; }
+    .main-bg .Dear-box .Dear-input {
+      width: 2.03125rem;
+      display: block;
+      float: left;
+      font-size: 14px;
+      line-height: 0.53125rem;
+      background-color: transparent;
+      border: 0;
+      outline: none;
+      text-indent: 0.0625rem;
+      border-bottom: 2px dashed transparent;
+      -webkit-animation: borderPlay 1s linear 2s;
+      -webkit-animation-fill-mode: forwards; }
+  .main-bg .You-box {
+    height: 0.51563rem;
+    position: absolute;
+    top: 10.125rem;
+    left: 6.875rem; }
+    .main-bg .You-box .You-text {
+      display: block;
+      float: left;
+      font-size: 14px;
+      line-height: 0.51563rem;
+      color: #383737; }
+    .main-bg .You-box .You-input {
+      width: 1.0625rem;
+      display: block;
+      float: left;
+      font-size: 14px;
+      line-height: 0.53125rem;
+      background-color: transparent;
+      border: 0;
+      outline: none;
+      text-indent: 0.0625rem;
+      border-bottom: 2px dashed transparent;
+      -webkit-animation: borderPlay 1s linear 2s;
+      -webkit-animation-fill-mode: forwards; }
+  .main-bg .Warning {
+    position: absolute;
+    top: 10.625rem;
+    left: 3.4375rem;
+    display: none; }
+    .main-bg .Warning .Warning-Text {
+      display: block;
+      font-size: 12px; }
+
+@-webkit-keyframes borderPlay {
+  to {
+    border-bottom: 2px dashed #696969; } }
+
+/*# sourceMappingURL=page1.css.map */

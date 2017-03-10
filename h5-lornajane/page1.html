@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <meta name="x5-fullscreen" content="true">
+    <meta name="full-screen" content="yes">
+    <title>Lorna Jane</title>
+    <link rel="stylesheet" href="css/page1.css">
+    <script>
+        var fontSize = parseInt(document.documentElement.clientWidth)/10;
+        document.querySelector("html").style.fontSize = fontSize+"px";
+    </script>
+</head>
+<body>
+    <div class="Page-bg">
+        <img src="img/bg1.jpg" alt="">
+    </div>
+    <div class="main-bg">
+        <div class="again-Btn">
+            <img src="img/page1/again.png" alt="">
+        </div>
+        <div class="finish-Btn">
+            <img src="img/page1/finish1.png" alt="">
+        </div>
+        <div class="Dear-box">
+            <span class="Dear-text">亲爱的 </span>
+            <input class="Dear-input" type="text" placeholder="闺蜜的姓名">
+        </div>
+        <div class="You-box">
+            <span class="You-text">你的 </span>
+            <input class="You-input" type="text" placeholder="姓 名">
+        </div>
+
+        <div class="Warning">
+            <span class="Warning-Text">请填写闺蜜和你的姓名</span>
+        </div>
+    </div>
+    <audio id="page1-player" src="music/click.mp3"></audio>
+</body>
+<script src="js/jquery.min.js"></script>
+<script>
+    var nowPage = sessionStorage.getItem("page");
+    var rightPage = nowPage-2;
+    console.info(rightPage);
+    $(".main-bg").css({
+        "background":"url(img/page1/Tpage"+rightPage+".png) no-repeat",
+        "background-size":"100% 100%"
+    });
+</script>
+<script src="js/page1.js"></script>
+</html>

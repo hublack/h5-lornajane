@@ -1,0 +1,468 @@
+
+$basePx:640;
+
+@function pxCount($px) {
+  @return $px/$basePx*10+rem;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "微软雅黑";
+}
+img {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+html,body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.flipbook-viewport {
+  position: absolute;
+  top: pxCount(144);
+  width: pxCount(615);
+  height: pxCount(792);
+  .page {
+    background-color: #e7e7e7;
+  }
+  .turn-page {
+    background-color: #e7e7e7;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  .container {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+.flipbook {
+  width: 100%;
+  height: 100%;
+  overflow: visible !important;
+  div {
+    width: 100%;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+
+#bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -999;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.audio-icon {
+  width: pxCount(40);
+  height: pxCount(40);
+  position: absolute;
+  top: pxCount(24);
+  right: pxCount(26);
+  background: url(../img/PrePage/music.png) no-repeat;
+  background-size: 100% 100%;
+  z-index: 10;
+}
+.audio-icon-animation {
+  -webkit-animation: rotate 2s linear infinite;
+}
+
+@-webkit-keyframes rotate {0%,100% {transform: rotate(0deg);} 100% {transform: rotate(360deg);}}
+
+
+
+#div1 {
+  position: relative;
+  .div1-text {
+    width: pxCount(210);
+    height: pxCount(40);
+    position: absolute;
+    top: pxCount(348);
+    left: pxCount(119);
+    background: url(../img/textGif.gif) no-repeat;
+    background-size: 100% 100%;
+    //-webkit-animation: textPlay 1s steps(50,end);
+  }
+  #go-Btn {
+    width: pxCount(178);
+    height: pxCount(44);
+    background: url(../img/PrePage/goBtn.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: pxCount(698);
+    right: pxCount(10);
+    z-index: 999;
+    .doto-Gif {
+      width: pxCount(40);
+      height: pxCount(28);
+      position: absolute;
+      top: pxCount(8);
+      right: 0;
+      z-index: 999;
+    }
+  }
+}
+@-webkit-keyframes textPlay
+{
+  from {width: 0;}
+
+  to {width: pxCount(210);}
+}
+
+#page-box1 {
+   position: relative;
+   .color-box1 {
+     width: pxCount(155);
+     height: pxCount(134);
+     position: absolute;
+     top: pxCount(442);
+     left: pxCount(247);
+     background: url(../img/color1.png) no-repeat;
+     background-size: 100% 100%;
+     z-index: 100;
+     opacity: 1;
+     -webkit-animation: colorPlay 1.5s linear infinite;
+   }
+  .box1-text1 {
+    display: block;
+    //width: pxCount(270);
+    width: 0;
+    position: absolute;
+    top: pxCount(92);
+    left: pxCount(183);
+    font-size: 14px;
+    line-height: pxCount(28);
+    color: #383737;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .box1-text2 {
+    display: block;
+    //width: pxCount(270);
+    width: 0;
+    position: absolute;
+    top: pxCount(125);
+    left: pxCount(183);
+    font-size: 14px;
+    line-height: pxCount(28);
+    color: #383737;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+.playFont1 {
+  -webkit-animation: drawText1 1.5s steps(50,end);
+  -webkit-animation-fill-mode: forwards;
+}
+.playFont2 {
+  -webkit-animation: drawText2 1.5s steps(50,end) 2s;
+  -webkit-animation-fill-mode: forwards;
+}
+@-webkit-keyframes drawText1
+{
+  from {width: 0;}
+  to {width: pxCount(350);}
+}
+@-webkit-keyframes drawText2
+{
+  from {width: 0;}
+  to {width: pxCount(380);}
+}
+
+#page-box2 {
+  position: relative;
+  .color-box2 {
+    width: pxCount(180);
+    height: pxCount(112);
+    position: absolute;
+    top: pxCount(472);
+    left: pxCount(228);
+    background: url(../img/color2.png) no-repeat;
+    background-size: 100% 100%;
+    z-index: 100;
+    opacity: 1;
+    -webkit-animation: colorPlay 1.5s linear infinite;
+  }
+  .box2-text1 {
+    display: block;
+    //width: pxCount(300);
+    width: 0;
+    position: absolute;
+    top: pxCount(92);
+    left: pxCount(175);
+    font-size: 14px;
+    line-height: pxCount(28);
+    color: #383737;
+    white-space: nowrap;
+    overflow: hidden;
+    //animation: drawText1 2s steps(50,end) 1s;
+    //animation-fill-mode: forwards;
+  }
+  .box2-text2 {
+    display: block;
+    width: 0;
+    position: absolute;
+    top: pxCount(125);
+    left: pxCount(170);
+    font-size: 14px;
+    line-height: pxCount(28);
+    color: #383737;
+    white-space: nowrap;
+    overflow: hidden;
+    //animation: drawText2 2s steps(50,end) 3s;
+    //animation-fill-mode: forwards;
+  }
+}
+
+#page-box3 {
+  position: relative;
+  .color-box3 {
+    width: pxCount(180);
+    height: pxCount(180);
+    position: absolute;
+    top: pxCount(419);
+    left: pxCount(220);
+    background: url(../img/color3.png) no-repeat;
+    background-size: 100% 100%;
+    z-index: 100;
+    opacity: 1;
+    -webkit-animation: colorPlay 1.5s linear infinite;
+  }
+  .box3-text1 {
+    display: block;
+    width: 0;
+    position: absolute;
+    top: pxCount(92);
+    left: pxCount(170);
+    font-size: 14px;
+    line-height: pxCount(28);
+    color: #383737;
+    white-space: nowrap;
+    overflow: hidden;
+    //animation: drawText1 2s steps(50,end) 1s;
+    //animation-fill-mode: forwards;
+  }
+  .box3-text2 {
+    display: block;
+    width: 0;
+    position: absolute;
+    top: pxCount(125);
+    left: pxCount(220);
+    font-size: 14px;
+    line-height: pxCount(28);
+    color: #383737;
+    white-space: nowrap;
+    overflow: hidden;
+    //animation: drawText2 2s steps(50,end) 3s;
+    //animation-fill-mode: forwards;
+  }
+}
+#page-box4 {
+  position: relative;
+  .color-box4 {
+    width: pxCount(170);
+    height: pxCount(115);
+    position: absolute;
+    top: pxCount(444);
+    left: pxCount(220);
+    background: url(../img/color4.png) no-repeat;
+    background-size: 100% 100%;
+    z-index: 100;
+    opacity: 1;
+    -webkit-animation: colorPlay 1.5s linear infinite;
+  }
+  .box4-text1 {
+    display: block;
+    width: 0;
+    position: absolute;
+    top: pxCount(92);
+    left: pxCount(190);
+    font-size: 14px;
+    line-height: pxCount(28);
+    color: #383737;
+    white-space: nowrap;
+    overflow: hidden;
+    //animation: drawText1 2s steps(50,end) 1s;
+    //animation-fill-mode: forwards;
+  }
+  .box4-text2 {
+    display: block;
+    width: 0;
+    position: absolute;
+    top: pxCount(125);
+    left: pxCount(250);
+    font-size: 14px;
+    line-height: pxCount(28);
+    color: #383737;
+    white-space: nowrap;
+    overflow: hidden;
+    //animation: drawText2 2s steps(50,end) 3s;
+    //animation-fill-mode: forwards;
+  }
+}
+#page-box5 {
+  position: relative;
+  .color-box5 {
+    width: pxCount(188);
+    height: pxCount(122);
+    position: absolute;
+    top: pxCount(451);
+    left: pxCount(218);
+    background: url(../img/color5.png) no-repeat;
+    background-size: 100% 100%;
+    z-index: 100;
+    opacity: 1;
+    -webkit-animation: colorPlay 1.5s linear infinite;
+  }
+  .box5-text1 {
+    display: block;
+    width: 0;
+    position: absolute;
+    top: pxCount(92);
+    left: pxCount(207);
+    font-size: 14px;
+    line-height: pxCount(28);
+    color: #383737;
+    white-space: nowrap;
+    overflow: hidden;
+    //animation: drawText1 2s steps(50,end) 1s;
+    //animation-fill-mode: forwards;
+  }
+  .box5-text2 {
+    display: block;
+    width: 0;
+    position: absolute;
+    top: pxCount(125);
+    left: pxCount(250);
+    font-size: 14px;
+    line-height: pxCount(28);
+    color: #383737;
+    white-space: nowrap;
+    overflow: hidden;
+    //animation: drawText2 2s steps(50,end) 3s;
+    //animation-fill-mode: forwards;
+  }
+}
+
+@-webkit-keyframes colorPlay
+{
+  0% {opacity: 1;}
+  50% {opacity: 0.2;}
+  100% {opacity: 1;}
+}
+
+.left-Btn {
+  width: pxCount(45);
+  height: pxCount(25);
+  position: absolute;
+  top: pxCount(884);
+  left: pxCount(115);
+  background: url(../img/leftBtn.png) no-repeat;
+  background-size: 100% 100%;
+  z-index: 900;
+  display: none;
+}
+
+//.left-play {
+//  -webkit-animation: leftbtn 1.2s linear infinite;
+//}
+
+.right-Btn {
+  width: pxCount(45);
+  height: pxCount(25);
+  position: absolute;
+  top: pxCount(884);
+  left: pxCount(484);
+  background: url(../img/rightBtn.png) no-repeat;
+  background-size: 100% 100%;
+  z-index: 900;
+  display: none;
+}
+
+//.right-play {
+//  -webkit-animation: rightbtn 1.2s linear infinite;
+//}
+
+//@-webkit-keyframes leftbtn
+//{
+//  from {left: pxCount(115);}
+//
+//  to {left: pxCount(90);opacity: 0.2;}
+//}
+//@-webkit-keyframes rightbtn
+//{
+//  from {left: pxCount(484);}
+//
+//  to {left: pxCount(510);opacity: 0.2;}
+//}
+
+.hands {
+  width: pxCount(108);
+  height: pxCount(42);
+  position: absolute;
+  top: pxCount(166);
+  left: pxCount(50);
+  background: url(../img/hands.png) no-repeat;
+  background-size: 100% 100%;
+  z-index: 100;
+  display: none;
+  -webkit-animation: handsPlay 1.4s linear infinite;
+}
+
+@-webkit-keyframes handsPlay
+{
+  from {top: pxCount(166);}
+
+  to {top: pxCount(200);opacity: 0.5;}
+}
+
+
+
+.touchBox {
+  width: 18%;
+  height: 74%;
+  position: absolute;
+  top: 11%;
+  left: 1%;
+  z-index: 999;
+}
+
+
+
+.change {
+  -webkit-animation: myfirst 4s;
+}
+
+
+@-webkit-keyframes myfirst
+{
+  from {}
+
+  to {-webkit-transform: translate(700px,-1200px) scale(0.3,0.3) skew(-20deg,-10deg) rotateY(120deg);}
+}
+
+
+
+
+
+
+
+
+
+

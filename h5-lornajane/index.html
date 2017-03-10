@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="x5-fullscreen" content="true">
+    <meta name="full-screen" content="yes">
+    <title>Lorna Jane</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script>
+        var fontSize = parseInt(document.documentElement.clientWidth)/10;
+        document.querySelector("html").style.fontSize = fontSize+"px";
+        sessionStorage.clear();
+    </script>
+</head>
+<body>
+    <div id="bg">
+        <img src="img/bg1.jpg">
+    </div>
+    <div class="flipbook-viewport">
+        <div class="container">
+            <div class="flipbook">
+                <div id="div1">
+                    <img src="img/prePage.jpg">
+
+                    <div class="div1-text"></div>
+                    <div id="go-Btn">
+                        <img class="doto-Gif" src="img/doto.gif" alt="">
+                    </div>
+                </div>
+                <div>
+                    <img src="img/rulePage.png">
+                </div>
+                <div id="page-box1">
+                    <img src="img/page1.png">
+                    <div class="color-box1"></div>
+                    <span class="box1-text1">闺蜜就是: 无论隔着几人坐,</span>
+                    <span class="box1-text2">一个眼神就能明白彼此的人</span>
+                </div>
+                <div id="page-box2">
+                    <img src="img/page2.png">
+                    <div class="color-box2"></div>
+                    <span class="box2-text1">闺蜜就是: 当我找到幸福去向,</span>
+                    <span class="box2-text2">帮我快乐地化妆,陪我傻,笑我慌</span>
+                </div>
+                <div id="page-box3">
+                    <img src="img/page3.png">
+                    <div class="color-box3"></div>
+                    <span class="box3-text1">闺蜜就是: 一起捂眼看恐怖片,</span>
+                    <span class="box3-text2">然后结伴去洗手间</span>
+                </div>
+                <div id="page-box4">
+                    <img src="img/page4.png">
+                    <div class="color-box4"></div>
+                    <span class="box4-text1">闺蜜就是: 吵不散,骂不走,</span>
+                    <span class="box4-text2">远了想,近了烦</span>
+                </div>
+                <div id="page-box5">
+                    <img src="img/page5.png">
+                    <div class="color-box5"></div>
+                    <span class="box5-text1">闺蜜就是: 当我减肥时,</span>
+                    <span class="box5-text2">你也别想吃!</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="left-Btn"></div>
+    <div class="right-Btn"></div>
+    <div class="hands"></div>
+    <div class="touchBox"></div>
+
+    <!-- audio -->
+    <div class="audio-icon">
+        <audio id="audio-player" src="music/bgm.mp3" loop="loop" preload></audio>
+    </div>
+    <audio id="page-player" src="music/tp.mp3"></audio>
+    <audio id="tear-player" src="music/tear.mp3"></audio>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/turn.js"></script>
+<script>
+    function audioAutoPlay(id){
+        var audio = document.getElementById(id),
+                play = function(){
+                    audio.play();
+                    document.removeEventListener("touchstart",play, false);
+                };
+        audio.play();
+        document.addEventListener("WeixinJSBridgeReady", function () {//微信
+            play();
+        }, false);
+        document.addEventListener("touchstart",play, false);
+    }
+    audioAutoPlay("audio-player");
+</script>
+<script src="js/index.js"></script>
+</html>

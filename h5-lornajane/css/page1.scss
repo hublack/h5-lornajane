@@ -1,0 +1,140 @@
+
+$basePx:640;
+
+@function pxCount($px) {
+  @return $px/$basePx*10+rem;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "微软雅黑";
+}
+img {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+html,body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.Page-bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -999;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.main-bg {
+  width: pxCount(612);
+  height: pxCount(798);
+  position: absolute;
+  top: pxCount(142);
+  left: 0;
+  .again-Btn {
+    width: pxCount(142);
+    height: pxCount(23);
+    position: absolute;
+    top: pxCount(23);
+    left: pxCount(445);
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .finish-Btn {
+    width: pxCount(172);
+    height: pxCount(40);
+    position: absolute;
+    top: pxCount(718);
+    left: pxCount(234);
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .Dear-box {
+    height: pxCount(33);
+    position: absolute;
+    top: pxCount(58);
+    left: pxCount(60);
+    .Dear-text {
+      display: block;
+      float: left;
+      font-size: 14px;
+      line-height: pxCount(33);
+      color: #383737;
+    }
+    .Dear-input {
+      width: pxCount(130);
+      display: block;
+      float: left;
+      font-size: 14px;
+      line-height: pxCount(34);
+      background-color: rgba(0,0,0,0);
+      border: 0;
+      outline: none;
+      text-indent: pxCount(4);
+      border-bottom: 2px dashed rgba(0,0,0,0);
+      -webkit-animation: borderPlay 1s linear 2s;
+      -webkit-animation-fill-mode: forwards;
+    }
+  }
+  .You-box {
+    height: pxCount(33);
+    position: absolute;
+    top: pxCount(648);
+    left: pxCount(440);
+    .You-text {
+      display: block;
+      float: left;
+      font-size: 14px;
+      line-height: pxCount(33);
+      color: #383737;
+    }
+    .You-input {
+      width: pxCount(68);
+      display: block;
+      float: left;
+      font-size: 14px;
+      line-height: pxCount(34);
+      background-color: rgba(0,0,0,0);
+      border: 0;
+      outline: none;
+      text-indent: pxCount(4);
+      border-bottom: 2px dashed rgba(0,0,0,0);
+      -webkit-animation: borderPlay 1s linear 2s;
+      -webkit-animation-fill-mode: forwards;
+    }
+  }
+
+  .Warning {
+    position: absolute;
+    top: pxCount(680);
+    left: pxCount(220);
+    display: none;
+    .Warning-Text {
+      display: block;
+      font-size: 12px;
+    }
+  }
+}
+
+@-webkit-keyframes borderPlay
+{
+  from {}
+
+  to {border-bottom: 2px dashed #696969;}
+}
+

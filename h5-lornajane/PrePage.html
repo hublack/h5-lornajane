@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <meta name="x5-fullscreen" content="true">
+    <meta name="full-screen" content="yes">
+    <title>Lorna Jane</title>
+    <link rel="stylesheet" href="css/PrePage.css">
+    <script>
+        var fontSize = parseInt(document.documentElement.clientWidth)/10;
+        document.querySelector("html").style.fontSize = fontSize+"px";
+    </script>
+</head>
+<body>
+    <div class="PrePage-bg">
+        <img src="img/bg1.jpg" alt="">
+    </div>
+    <div class="Cover-page">
+        <div class="finish-Btn"></div>
+        <div class="change-Btn"></div>
+    </div>
+    <audio id="Prepage-player" src="music/click.mp3"></audio>
+</body>
+<script src="js/jquery.min.js"></script>
+<script>
+    window.onload=function(){
+        document.querySelector('body').addEventListener('touchmove', function (ev) {
+            event.preventDefault();
+        });
+
+        var PrepagePlayer = document.getElementById('Prepage-player');
+        var SetPage = sessionStorage.getItem('page');
+        console.info(SetPage);
+       $(".finish-Btn").on("touchend",function(){
+           window.location.href="page1.html";
+           PrepagePlayer.play();
+
+       });
+       $(".change-Btn").on("touchend",function(){
+           window.location.href="index.html?change=encodeURI("+3+")";
+           PrepagePlayer.play();
+       })
+    }
+</script>
+</html>
